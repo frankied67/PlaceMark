@@ -1,0 +1,28 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Event</th>
+      <th>Artist</th>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each venue.events}}
+      <tr>
+        <td>
+          {{event}}
+        </td>
+        <td>
+          {{artist}}
+        </td>
+        <td>
+          {{date}}
+        </td>
+        <td>
+          {{time}}
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

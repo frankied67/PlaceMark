@@ -15,7 +15,7 @@ export const dashboardController = {
   addVenue: {
     handler: async function (request, h) {
       const newVenue = {
-        title: request.payload.title,
+        name: request.payload.name,
       };
       await db.venueStore.addVenue(newVenue);
       return h.redirect("/dashboard");

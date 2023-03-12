@@ -1,9 +1,10 @@
 import { v4 } from "uuid";
+import { eventMemStore } from "./event-mem-store.js";
 
 let venues = [];
 
 export const venueMemStore = {
-  async getAllVenuess() {
+  async getAllVenues() {
     return venues;
   },
 
@@ -14,7 +15,9 @@ export const venueMemStore = {
   },
 
   async getVenueById(id) {
-    return venues.find((venue) => venue._id === id);
+    const list = venues.find((venue) => venue._id === id);
+    list.events = await eventMemStore.getEventsByVenueId(list._id);
+    return list;
   },
 
   async deleteVenueById(id) {

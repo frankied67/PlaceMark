@@ -1,0 +1,20 @@
+<form class="box" action="/venue/{{venue._id}}/addevent" method="POST">
+  <label>Enter Event Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Event" name="event">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Artist" name="artist">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter date" name="date">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter time" name="time">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Event</button>
+</form>
