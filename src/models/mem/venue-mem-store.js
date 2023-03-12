@@ -20,6 +20,10 @@ export const venueMemStore = {
     return list;
   },
 
+  async getUserVenues(userid) {
+    return venues.filter((venue) => venue.userid === userid);
+  },
+
   async deleteVenueById(id) {
     const index = venues.findIndex((venue) => venue._id === id);
     venues.splice(index, 1);

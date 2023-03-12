@@ -35,6 +35,7 @@ export const accountsController = {
       if (!user || user.password !== password) {
         return h.redirect("/");
       }
+      request.cookieAuth.set({ id: user._id });
       return h.redirect("/dashboard");
     },
   },
