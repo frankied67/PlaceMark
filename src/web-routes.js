@@ -15,6 +15,9 @@ export const webRoutes = [
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
   { method: "POST", path: "/dashboard/addvenue", config: dashboardController.addVenue },
+  { method: "GET", path: "/dashboard/deletevenue/{id}", config: dashboardController.deleteVenue },
+
   { method: "GET", path: "/venue/{id}", config: venueController.index },
   { method: "POST", path: "/venue/{id}/addevent", config: venueController.addEvent },
+  { method: "GET", path: "/venue/{id}/deleteevent/{eventid}", config: venueController.deleteEvent },
 ];

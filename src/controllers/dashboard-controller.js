@@ -25,4 +25,12 @@ export const dashboardController = {
       return h.redirect("/dashboard");
     },
   },
+
+  deleteVenue: {
+    handler: async function(request, h) {
+      const venue = await db.venueStore.getVenueById(request.params.id);
+      await db.venueStore.deleteVenueById(venue._id);
+      return h.redirect("/dashboard");
+    },
+  },
 };

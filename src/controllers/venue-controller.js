@@ -25,4 +25,12 @@ export const venueController = {
       return h.redirect(`/venue/${venue._id}`);
     },
   },
+
+  deleteEvent: {
+    handler: async function(request, h) {
+      const venue = await db.venueStore.getVenueById(request.params.id);
+      await db.eventStore.deleteEvent(request.params.eventid);
+      return h.redirect(`/venue/${venue._id}`);
+    },
+  },
 };
