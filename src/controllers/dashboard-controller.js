@@ -20,6 +20,7 @@ export const dashboardController = {
       const newVenue = {
         userid: loggedInUser._id,
         name: request.payload.name,
+        location: request.payload.location,
       };
       await db.venueStore.addVenue(newVenue);
       return h.redirect("/dashboard");
