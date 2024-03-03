@@ -5,7 +5,7 @@ export const dashboardController = {
     handler: async function (request, h) {
       const locations = await db.locationStore.getAllLocations();
       const viewData = {
-        title: "Playmark Dashboard",
+        title: "Placemark Dashboard",
         locations: locations,
       };
       return h.view("dashboard-view", viewData);
