@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "920f9f0b-d0ce-4c03-9e1e-4ee5bcee61b1"
+    }
+  ],
+  "locations": [],
+  "monuments": []
+}
