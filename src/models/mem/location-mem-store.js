@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+import { monumentMemStore } from "./monument-mem-store.js";
 
 let locations = [];
 
@@ -14,7 +15,13 @@ export const locationMemStore = {
   },
 
   async getLocationById(id) {
-    return locations.find((location) => location._id === id);
+    const list = locations.find((location) => location._id === id);
+    list.monuments = await monumentMemStore.getMonumentsByLocationId(list._id);
+    return list;
+  },
+
+  async getUserLocations(userid) {
+    return locations.filter((location) => location.userid === userid);
   },
 
   async deleteLocationById(id) {
