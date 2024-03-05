@@ -25,4 +25,12 @@ export const locationController = {
       return h.redirect(`/location/${location._id}`);
     },
   },
+
+  deleteMonument: {
+    handler: async function (request, h) {
+      const location = await db.locationStore.getLocationById(request.params.id);
+      await db.monumentStore.deleteMonument(request.params.trackid);
+      return h.redirect(`/location/${location._id}`);
+    },
+  },
 };
