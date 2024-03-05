@@ -25,7 +25,6 @@ export const locationController = {
       return h.redirect(`/location/${location._id}`);
     },
   },
-<<<<<<< HEAD
 
   deleteMonument: {
     handler: async function (request, h) {
@@ -34,6 +33,4 @@ export const locationController = {
       return h.redirect(`/location/${location._id}`);
     },
   },
-=======
->>>>>>> 8ec9b7c1e5067b86ccbefb276d6f3cea891541b5
 };
