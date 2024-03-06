@@ -1,3 +1,4 @@
+import { LocationSpec } from "../models/joi-schemas.js";
 import { db } from "../models/db.js";
 
 export const dashboardController = {
@@ -15,6 +16,13 @@ export const dashboardController = {
   },
 
   addLocation: {
+    validate: {
+      payload: LocationSpec,
+      options: { abortEarly: false },
+      failAction: function (request, h, error) {
+        return h.view("dashboard-view", { title: "Add Location error", errors: error.details }).takeover().code(400);
+      },
+    },
     handler: async function (request, h) {
       const loggedInUser = request.auth.credentials;
       const newLocation = {
