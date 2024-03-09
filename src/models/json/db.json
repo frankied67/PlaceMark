@@ -29,12 +29,6 @@
       "_id": "2b100a60-9093-4ea8-95ca-cda589535418"
     }
   ],
-  "locations": [
-    {
-      "userid": "b6823be5-d61a-4439-b75f-e9be0e8e0eac",
-      "title": "Newmarket",
-      "_id": "24a901ad-db6b-4380-8529-9e6481fae545"
-    }
-  ],
+  "locations": [],
   "monuments": []
 }
