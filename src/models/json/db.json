@@ -5,23 +5,36 @@
       "lastName": "Simpson",
       "email": "homer@simpson.com",
       "password": "secret",
-      "_id": "bc5a9beb-dd3e-44a7-8127-0a04033decbc"
+      "_id": "b6823be5-d61a-4439-b75f-e9be0e8e0eac"
     },
     {
       "firstName": "Marge",
       "lastName": "Simpson",
       "email": "marge@simpson.com",
       "password": "secret",
-      "_id": "5495ed9a-b58b-487b-bb96-e12657e6185e"
+      "_id": "0616c922-5130-4f46-8bc8-3efd144d23b1"
     },
     {
       "firstName": "Bart",
       "lastName": "Simpson",
       "email": "bart@simpson.com",
       "password": "secret",
-      "_id": "12ef8d7d-06ce-4c55-b82d-6ae70226f7c7"
+      "_id": "507f311b-d6ec-4122-99e9-ca5993665529"
+    },
+    {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "_id": "2b100a60-9093-4ea8-95ca-cda589535418"
     }
   ],
-  "locations": [],
+  "locations": [
+    {
+      "userid": "b6823be5-d61a-4439-b75f-e9be0e8e0eac",
+      "title": "Newmarket",
+      "_id": "24a901ad-db6b-4380-8529-9e6481fae545"
+    }
+  ],
   "monuments": []
 }
