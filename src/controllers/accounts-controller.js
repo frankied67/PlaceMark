@@ -68,4 +68,16 @@ export const accountsController = {
     }
     return { isValid: true, credentials: user };
   },
+
+  admin: {
+    auth: false,
+    handler: async function (request, h) {
+      const users = await db.userStore.getAllUsers();
+      const viewData = {
+        title: "admin",
+        users: "users",
+      };
+      return h.view("admin", viewData);
+    },
+  },
 };
