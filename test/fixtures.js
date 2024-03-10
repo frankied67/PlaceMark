@@ -30,6 +30,17 @@ export const waterford = {
   title: "Waterford City",
 };
 
+export const abbey = {
+  title: "Quin Abbey",
+  latitude: 52.8191,
+  longitude: 8.8631,
+  category: "Abbey",
+};
+
+export const galway = {
+  title: "Galway City",
+};
+
 export const testLocations = [
   {
     title: "Ennis Co Clare",
@@ -39,5 +50,26 @@ export const testLocations = [
   },
   {
     title: "The Burren",
+  },
+];
+
+export const testMonuments = [
+  {
+    title: "Round Tower, Clondalkin",
+    latitude: 53.3221,
+    longitude: 6.3954,
+    category: "Round Tower",
+  },
+  {
+    title: "Kilkenny Castle",
+    latitude: 52.6505,
+    longitude: 7.2493,
+    category: "Castle",
+  },
+  {
+    title: "Bunratty Castle",
+    latitude: 52.6996,
+    longitude: 8.8119,
+    category: "Castle",
   },
 ];

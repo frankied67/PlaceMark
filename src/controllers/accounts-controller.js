@@ -75,7 +75,7 @@ export const accountsController = {
       const users = await db.userStore.getAllUsers();
       const viewData = {
         title: "admin",
-        users: "users",
+        users: users,
       };
       return h.view("admin", viewData);
     },
