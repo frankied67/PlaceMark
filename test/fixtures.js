@@ -25,3 +25,19 @@ export const testUsers = [
     password: "secret",
   },
 ];
+
+export const waterford = {
+  title: "Waterford City",
+};
+
+export const testLocations = [
+  {
+    title: "Ennis Co Clare",
+  },
+  {
+    title: "Galway City",
+  },
+  {
+    title: "The Burren",
+  },
+];
