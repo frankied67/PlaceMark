@@ -46,4 +46,9 @@ export const monumentMongoStore = {
     monument.category = updatedMonument.category;
     await monument.save();
   },
+
+  // async getCastleMonuments(id) {
+  //   const monuments = Monument.find({ category: "castle" }, { locationid: id });
+  //   return monuments;
+  // },
 };
