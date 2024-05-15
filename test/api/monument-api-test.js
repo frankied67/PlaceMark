@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { assertSubset } from "../test-utils.js";
 import { placemarkService } from "./placemark-service.js";
-import { maggie, waterford, testLocations, testMonuments, abbey } from "../fixtures.js";
+import { maggie, waterford, maggieCredentials, testLocations, testMonuments, abbey } from "../fixtures.js";
 
 suite("Monument API tests", () => {
   let user = null;
@@ -10,12 +10,12 @@ suite("Monument API tests", () => {
   setup(async () => {
     placemarkService.clearAuth();
     user = await placemarkService.createUser(maggie);
-    await placemarkService.authenticate(maggie);
+    await placemarkService.authenticate(maggieCredentials);
     await placemarkService.deleteAllLocations();
     await placemarkService.deleteAllUsers();
     await placemarkService.deleteAllMonuments();
     user = await placemarkService.createUser(maggie);
-    await placemarkService.authenticate(maggie);
+    await placemarkService.authenticate(maggieCredentials);
     waterford.userid = user._id;
     galwayList = await placemarkService.createLocation(waterford);
   });
