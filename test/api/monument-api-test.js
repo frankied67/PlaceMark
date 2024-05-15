@@ -8,10 +8,14 @@ suite("Monument API tests", () => {
   let galwayList = null;
 
   setup(async () => {
+    placemarkService.clearAuth();
+    user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
     await placemarkService.deleteAllLocations();
     await placemarkService.deleteAllUsers();
     await placemarkService.deleteAllMonuments();
     user = await placemarkService.createUser(maggie);
+    await placemarkService.authenticate(maggie);
     waterford.userid = user._id;
     galwayList = await placemarkService.createLocation(waterford);
   });
