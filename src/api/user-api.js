@@ -35,7 +35,7 @@ export const userApi = {
         }
         return user;
       } catch (err) {
-        return Boom.serverUnavailable("No User with this id");
+        return Boom.serverUnavailable("Database error");
       }
     },
     tags: ["api"],
@@ -94,7 +94,7 @@ export const userApi = {
           return Boom.unauthorized("Invalid password");
         }
         const token = createToken(user);
-        return h.response({ success: true, token: token }).code(201);
+        return h.response({ success: true, name: `${user.firstName} ${user.lastName}`, token: token, _id: user._id }).code(201);
       } catch (err) {
         return Boom.serverUnavailable("Database Error");
       }
