@@ -13,6 +13,7 @@
   "author": "Frank Donnellan",
   "license": "ISC",
   "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.6",
     "chai": "^5.1.0",
     "eslint": "^8.57.0",
     "eslint-config-airbnb-base": "^15.0.0",
@@ -27,7 +28,7 @@
     "@hapi/hapi": "^21.3.3",
     "@hapi/inert": "^7.1.0",
     "@hapi/vision": "^7.0.3",
-    "axios": "^1.6.7",
+    "axios": "^1.7.2",
     "boom": "^7.3.0",
     "dotenv": "^16.4.5",
     "handlebars": "^4.7.8",
